@@ -3,7 +3,7 @@ import { BsBookmarkPlus } from "react-icons/bs";
 import PropTypes from 'prop-types';
 
 
-const Blog = ({blog, handleAddToBookmark}) => {
+const Blog = ({blog, handleAddToBookmark,handleMarkAsRead}) => {
 
     const {title,cover,author, author_img, reading_time,posted_date, hashtags} = blog;
 
@@ -24,7 +24,7 @@ const Blog = ({blog, handleAddToBookmark}) => {
                     <div className="">
                         <p>
                             <span>{reading_time}</span> min read  
-                            <button onClick={handleAddToBookmark} className="ml-3"> <BsBookmarkPlus></BsBookmarkPlus></button>
+                            <button onClick={()=>handleAddToBookmark(blog)} className="ml-3"> <BsBookmarkPlus></BsBookmarkPlus></button>
                         </p>
                     </div>
                 </div>
@@ -32,13 +32,13 @@ const Blog = ({blog, handleAddToBookmark}) => {
 
                 <h1 className='text-3xl font-bold'>{title}</h1>
 
-                <p>
+                <p className="my-3">
                     {
                         hashtags.map((hash,idx) => <span key={idx}><a href=""> #{hash}</a></span>)
                     }
                 </p>
 
-                <button className='btn btn-link '>M</button>
+                <button onClick={() => handleMarkAsRead(reading_time)} className='underline text-sky-500'>Mark as read</button>
 
         </div>
     );
@@ -46,7 +46,9 @@ const Blog = ({blog, handleAddToBookmark}) => {
 
 Blog.propTypes = {
 
-    blog: PropTypes.object.isRequired
+    blog: PropTypes.object.isRequired,
+    handleAddToBookmark:PropTypes.func,
+    handleMarkAsRead:PropTypes.func
 }
 
 
