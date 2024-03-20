@@ -5,6 +5,7 @@ import './App.css'
 import Header from './Components/Header/Header'
 import Blogs from './Components/Blogs/Blogs'
 import Bookmarks from './Components/Bookmarks/Bookmarks'
+import Footer from './Components/Footer/Footer'
 
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
      <Bookmarks bookmarks={bookmarks} readingTime = {readingTime}></Bookmarks>
      </div>
 
+      <Footer></Footer>
 
     </>
   )
