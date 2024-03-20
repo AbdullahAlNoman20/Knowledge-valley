@@ -9,7 +9,7 @@ const Blog = ({blog, handleAddToBookmark,handleMarkAsRead}) => {
 
 
     return (
-        <div className='border-2 m-5 p-5 rounded-lg lg:px-10'>
+        <div className='border-2 border-purple-200 m-5 p-5 rounded-lg lg:px-10'>
             <img className='w-full rounded-3xl' src={cover} alt="" />
 
                 <div className="flex justify-between items-center">

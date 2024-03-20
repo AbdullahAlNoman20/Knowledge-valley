@@ -5,7 +5,7 @@ import Bookmark from '../Bookmark/Bookmark';
 const Bookmarks = ({bookmarks, readingTime}) => {
     return (
     
-        <div className="md:w-1/3 m-5 p-5 border-2 rounded-lg">
+        <div className="md:w-1/3 m-5 p-5 border-2 border-purple-200 rounded-lg">
             
             <div className="">
             <h1 className="text-2xl font-extrabold bg-red-100 my-3 p-2 rounded-lg">Spend Time on read:{readingTime} </h1>
